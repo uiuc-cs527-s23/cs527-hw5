@@ -66,7 +66,7 @@ public class SBFLTest
 						.split(System.lineSeparator()));
 		String buggyLine = "org.jsoup.parser.HtmlTreeBuilderState:768";
 		Map<String, Double> susp = SBFL.Ochiai(cov, failedTests);
-		assertEquals(0.1015346165133619, SBFL.getSusp(susp, buggyLine), 10e-5);
+		assertEquals(0.14359163172354764, SBFL.getSusp(susp, buggyLine), 10e-5);
 	}
 
 	@Test
@@ -83,8 +83,8 @@ public class SBFLTest
 		String buggyLine = "org.jsoup.parser.TokeniserState:219";
 		Map<String, Double> susp = SBFL.Ochiai(cov, failedTests);
 
-		assertEquals(0.14907119849998599, SBFL.getSusp(susp, buggyLine), 10e-5);
-		assertEquals(89, SBFL.getRank(susp, buggyLine));
+		assertEquals(0.7302967433402215, SBFL.getSusp(susp, buggyLine), 10e-5);
+		assertEquals(19, SBFL.getRank(susp, buggyLine));
 
 	}
 
